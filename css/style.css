@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    padding: 0.75rem 0;
+}
+
+a{
+   text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/*Utility style*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-primary{
+    color: #ffdd00;
+}
+
+.l-heading{
+    font-size: 4rem;
+}
+
+.m-heading{
+    font-size: 2rem;
+}
+
+.lead{
+    font-size: 1.4rem;
+}
+
+.bg-dark{
+    background-color: #333333;
+}
+
+.bg-light{
+    background-color: #f4f4f4;
+}
+
+.bg-primary{
+    background-color: #ffdd00;
+}
+
+.p-1{ padding: 1.5rem }
+.p-2{ padding: 2rem }
+.p-3{ padding: 3rem }
+.py-1{ padding: 1.5rem 0 }
+.py-2{ padding: 2rem 0 }
+.py-3{ padding: 3rem 0 }
+
+.btn{
+    background-color: #ffdd00;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem 2rem;
+}
+
+.btn-dark{
+    width: 100%;
+    color: #ffffff;
+    background-color: #333333;
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    background-color: #ffeb68;
+}
+
+/*Navbar style*/
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+
+    padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar_items{
+    display: flex;
+    align-items: center;
+}
+
+.navbar_link{
+    color: #ffffff;
+    margin: 0 0.25rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+}
+
+.navbar_link:hover{
+    background-color: #ffdd00;
+}
+
+/*Showcase style*/
+#showcase{
+    background: url(../images/showcase.jpg) no-repeat center center/cover;
+    height: 100vh;
+}
+
+.showcase_content{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    /*Overlay*/
+    position: absolute;
+    top: 61px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/*Features style*/
+.features_items{
+    display: flex;
+}
+
+.features_item{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+}
+
+.features_icon{
+    background-color: #ffdd00;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-right: 1.3rem;
+}
+
+/*Benefits style*/
+#benefits{
+    display: flex;
+}
+
+.benefits_img{
+    background: url(../images/people.jpg) no-repeat center center/cover;
+    flex: 1;
+}
+
+.benefits_content{
+    flex: 1;
+    color: #ffffff;
+}
+
+.benefits_list{
+    padding: .75rem 0;
+}
+
+.benefits_item{
+    padding: .5rem 0;
+    border-bottom: 1px dotted #444444;
+}
+
+/*Clients style*/
+.clients_list{
+    display: flex;
+    text-align: center;
+}
+
+.clients_img{
+    width: 60%;
+
+}
+
+/*Contact style*/
+#contact{
+    display: flex;
+}
+
+.contact_form{
+    color: #333333;
+    flex: 1;
+}
+
+.form_group{
+    margin: 0 1rem;
+}
+
+.contact_lebel,
+.contact_input,
+.contact_textarea{
+    display: block;
+    width: 100%;
+}
+
+.contact_lebel{
+    margin: .5rem 0;
+}
+
+.contact_input{
+    padding: .5rem 0;
+}
+
+.contact_textarea{
+    padding: 1rem 0;
+}
+
+#map{
+    flex: 2;
+}
+
+/*Footer style*/
+.footer_content{
+    color: #ffffff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* CSS */
+
+    /*Features media style*/
+    .features_item{
+        display: block;
+        text-align: center;
+    }
+
+    .features_icon{
+        margin-bottom: 1rem;
+    }
+
+    /*Contact media style*/
+    #map{
+        flex: 1;
+    }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* CSS */
+
+    /*Features media style*/
+    .features_items{
+        flex-direction: column;
+    }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /* CSS */
+
+    /*Utility media style*/
+    .l-heading{
+        font-size: 3rem;
+    }
+
+    .lead{
+        font-size: 1.1rem;
+    }
+
+    /*Navbar media style*/
+    #navbar{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .navbar_items{
+        margin-top: 1rem;
+    }
+
+    .navbar_link{
+        padding: .5rem;
+    }
+
+    /*Showcase media style*/
+    .showcase_content{
+        top: 95px
+    }
+
+    /*Features media style*/
+    .features_items{
+        flex-direction: column;
+    }
+
+    .features_item{
+        display: block;
+        text-align: center;
+    }
+
+    .features_icon{
+        margin-bottom: 1rem;
+    }
+
+    /*Benefits media style*/
+    #benefits{
+        flex-direction: column;
+    }
+
+    /*Contact media style*/
+    #contact{
+        flex-direction: column;
+    }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /* CSS */
+
+    /*Utility media style*/
+    .l-heading{
+        font-size: 3rem;
+    }
+
+    .lead{
+        font-size: 1.1rem;
+    }
+
+    /*Navbar media style*/
+    #navbar{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .navbar_items{
+        margin-top: 1rem;
+    }
+
+    .navbar_link{
+        padding: .5rem;
+    }
+
+    /*Showcase media style*/
+    .showcase_content{
+        top: 95px
+    }
+
+    /*Features media style*/
+    .features_items{
+        flex-direction: column;
+    }
+
+    .features_item{
+        display: block;
+        text-align: center;
+    }
+
+    .features_icon{
+        margin-bottom: 1rem;
+    }
+
+    /*Benefits media style*/
+    #benefits{
+        flex-direction: column;
+    }
+
+    /*Contact media style*/
+    #contact{
+        flex-direction: column;
+    }
+}
